@@ -6,7 +6,7 @@ from schemadb import Myproject, Base
 class Record:
   def record_db(self,dict_form):
 
-	engine = create_engine('mysql://root@localhost/myproject')
+	engine = create_engine('mysql://user_project:projectdb2019@localhost/project')
 	Base.metadata.bind = engine
  
 	DBSession = sessionmaker(bind=engine)
@@ -17,7 +17,7 @@ class Record:
 	session.commit()
 
   def find_duplicate_name(self,name):
-	engine = create_engine('mysql://root@localhost/myproject')
+	engine = create_engine('mysql://user_project:projectdb2019@localhost/project')
         Base.metadata.bind = engine
 
         DBSession = sessionmaker(bind=engine)

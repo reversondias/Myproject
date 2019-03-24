@@ -12,6 +12,6 @@ class Myproject(Base):
     animal = Column(String(250), nullable=False)
  
 
-engine = create_engine('mysql://root@localhost/myproject')
+engine = create_engine('mysql://user_project:projectdb2019@localhost/project')
  
 Base.metadata.create_all(engine)
