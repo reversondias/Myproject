@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from record import Record
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/', methods=['POST','GET'])
+@application.route('/', methods=['POST','GET'])
 def form():
    if request.method == 'POST':
       result_form = request.form
@@ -17,7 +17,7 @@ def form():
    else:
      return render_template('form.html')
 
-@app.route('/record',methods = ['POST'])
+@application.route('/record',methods = ['POST'])
 def record():
    if request.method == 'POST':
       result_form = request.form
