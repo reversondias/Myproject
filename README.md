@@ -41,9 +41,9 @@ To comunicate to database it use SQLAlchemy and the data base is MariaDB. An use
 Its divided in:  
 
 conf  
-  db.conf   -> Configuration data base parameters  
+&nbsp;&nbsp;db.conf   -> Configuration data base parameters  
 templates  
-  form.html -> HTML Fomulary  
+&nbsp;&nbsp;form.html -> HTML Fomulary  
 index.py    -> The main file to run flask application  
 record.py   -> The persist class. Comunicate with the database  
 schemadb.py -> The table schema  
