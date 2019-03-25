@@ -14,7 +14,9 @@ configparser
 
 On repository there is a requirements.txt. Can you use that to resolve the requriments.
 You can use the command:  
+```
 #sudo pip install -r requirements.txt  
+```
 
 Configuration Data Base
 -----------------------
@@ -50,7 +52,9 @@ schemadb.py -> The table schema
 wsgi.py     -> To start web application  
 
 To run the application on the home directory run the follow command:  
+```
 #sudo gunicorn --bind 0.0.0.0 wsgi  
+```
 
 The default port is 8000. If you want to change, use "0.0.0.0:8080".  
 In this case, the application liten to every IP address.  
