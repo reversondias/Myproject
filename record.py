@@ -14,7 +14,7 @@ class Record:
 
 	config_server = dict(self.config.items('server'))
 
-	engine = create_engine('mysql://'+config_server['user']+':'+config_server['passwd']+'@localhost/'+config_server['db'])
+	engine = create_engine('mysql://'+config_server['user']+':'+config_server['passwd']+config_server['server']+'/'+config_server['db'])
 	Base.metadata.bind = engine
  
 	DBSession = sessionmaker(bind=engine)
@@ -26,7 +26,7 @@ class Record:
 
   def find_duplicate_name(self,name):
 	config_server = dict(self.config.items('server'))
-	engine = create_engine('mysql://'+config_server['user']+':'+config_server['passwd']+'@localhost/'+config_server['db'])
+	engine = create_engine('mysql://'+config_server['user']+':'+config_server['passwd']+config_server['server']+'/'+config_server['db'])
 	Base.metadata.create_all(engine)
         Base.metadata.bind = engine
 
