@@ -10,8 +10,3 @@ class Myproject(Base):
     name = Column(String(250), nullable=False)
     color = Column(String(250), nullable=False)
     pet = Column(String(4), nullable=False)
- 
-
-engine = create_engine('mysql://root@localhost/myproject')
- 
-Base.metadata.create_all(engine)
